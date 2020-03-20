@@ -7,12 +7,16 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body onload="showModal()">
-    <div id="openModal" class="modalDialog">
+    <div id="openModal" class="overlay">
       <div class="modal">
         <a href="#close" title="Close" class="close" onclick="closeModal();">X</a>
-        <h2>Mi modal</h2>
-        <p>Este es un ejemplo de modal, creado gracias al poder de CSS3.</p>
-        <p>Puedes hacer un montón de cosas aquí, como alertas o incluso crear un formulario de registro aquí mismo.</p>
+        <h2>Busquedad de pokémon</h2>
+        <div class="modal__image">
+          <img src="" alt="" id="pokemon" width="130" height="130" height="100">
+        </div>
+        <div class="modal__name"></div>
+        <button class="modal__button modal__button--before">Atrás</button>
+        <button class="modal__button modal__button--next">Siguiente</button> 
       </div>
     </div>
 

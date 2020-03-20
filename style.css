@@ -1,6 +1,8 @@
-.modalDialog {
-	position: fixed;
+.overlay {
+	justify-content: center;
+    align-items: center;
 	font-family: Arial, Helvetica, sans-serif;
+	position: absolute;
 	top: 0;
 	right: 0;
 	bottom: 0;
@@ -13,18 +15,68 @@
 	pointer-events: auto;
 }
 .modal {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
 	width: 400px;
 	height: 490px;
-	position: relative;
-	margin: 10% auto;
-	padding: 5px 20px 13px 20px;
+	padding: 1rem;
+	box-sizing: border-box;
 	border-radius: 10px;
 	background-image: url(./images/pokeball-400x490.jpg);
-	background-repeat: no-repeat;
-  	-webkit-transition: opacity 400ms ease-in;
-	-moz-transition: opacity 400ms ease-in;
-	transition: opacity 400ms ease-in;
+	position: relative;
+    animation-name: modalIn;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+	
 }
+@keyframes modalIn
+	{
+		from
+		{
+			transform:translateY(-1000px)
+		}
+		40%
+		{
+			transform: translateY(10px);
+		}
+		60%
+		{
+			transform: translateY(-10px);
+		}
+		80%
+		{
+			transform: translateY(5px);
+		}
+		to
+		{
+			transform: translateY(0);
+		}
+}
+@keyframes modalOut
+    {
+        from
+        {
+            transform: translateY(0);
+        }
+        40%
+        {
+            transform: translateY(10px);
+        }
+        60%
+        {
+            transform: translateY(-10px);
+        }
+        80%
+        {
+            transform: translateY(5px);
+        }
+        to
+        {
+            transform:translateY(-1000px)
+        }
+    }
 .close {
 	background: #606061;
 	color: #FFFFFF;
@@ -36,11 +88,30 @@
 	width: 24px;
 	text-decoration: none;
 	font-weight: bold;
-	-webkit-border-radius: 12px;
-	-moz-border-radius: 12px;
 	border-radius: 12px;
 	-moz-box-shadow: 1px 1px 3px #000;
 	-webkit-box-shadow: 1px 1px 3px #000;
 	box-shadow: 1px 1px 3px #000;
 }
 .close:hover { background: #00d9ff; }
+
+.modal__button {
+	width: 100px;
+	height: 40px;
+	font-size: 1.1rem;
+	border-radius: 5px;
+	color: white;
+	cursor: pointer;
+}
+.modal__button--next {
+	background-color: green;
+}
+.modal__button--before {
+	background: red;
+}
+.modal__image {
+
+}
+.modal__name {
+	
+} 
