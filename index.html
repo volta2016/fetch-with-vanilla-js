@@ -8,15 +8,17 @@
 </head>
 <body onload="showModal()">
     <div id="openModal" class="overlay">
-      <div class="modal">
+      <div id="modal" class="modal">
         <a href="#close" title="Close" class="close" onclick="closeModal();">X</a>
         <h2>Busquedad de pokémon</h2>
         <div class="modal__image">
           <img src="" alt="" id="pokemon" width="130" height="130" height="100">
         </div>
         <div class="modal__name"></div>
-        <button class="modal__button modal__button--before">Atrás</button>
-        <button class="modal__button modal__button--next">Siguiente</button> 
+        <div class="buttton-container">
+          <button id="before" class="modal__button modal__button--before">Atrás</button>
+          <button id="next" class="modal__button modal__button--next">Siguiente</button> 
+        </div>
       </div>
     </div>
 

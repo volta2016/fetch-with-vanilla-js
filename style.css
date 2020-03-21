@@ -17,6 +17,7 @@
 .modal {
 	display: flex;
 	flex-direction: column;
+	justify-content: space-around;
 	align-items: center;
 	text-align: center;
 	width: 400px;
@@ -94,7 +95,9 @@
 	box-shadow: 1px 1px 3px #000;
 }
 .close:hover { background: #00d9ff; }
-
+.buttton-container {
+	display: flex;
+}
 .modal__button {
 	width: 100px;
 	height: 40px;
@@ -102,11 +105,20 @@
 	border-radius: 5px;
 	color: white;
 	cursor: pointer;
+	border: none;
+	transition: 0.3s;
+	margin: 0 1rem;
 }
 .modal__button--next {
+	background-color: #008000ad;
+}
+.modal__button--next:hover {
 	background-color: green;
 }
 .modal__button--before {
+	background: #ff0000a8;
+}
+.modal__button--before:hover {
 	background: red;
 }
 .modal__image {
