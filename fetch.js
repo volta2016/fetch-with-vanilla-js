@@ -1,4 +1,4 @@
-let pokemon = document.querySelectorAll('#pokemon');
+let pokemon = document.getElementById('pokemon');
 let imagen = document.querySelectorAll('.modal__image');
 let pokename = document.querySelectorAll('.modal__name');
 let before = document.getElementById('before');
@@ -11,15 +11,14 @@ function showModal() {
 }
 
 
-
 function closeModal() {
-  document.getElementById('modal').style.display = 'none';
+  // document.getElementById('modal').style.display = 'none';
+  modal.style.animationName="modalOut"
 }
 
 
-
 let start = 1;
-promesa(start)
+promesa(start);
 function promesa(start) {
   fetch(`https://pokeapi.co/api/v2/pokemon/${start}`)
   .then(response => {
@@ -36,14 +35,14 @@ function promesa(start) {
 }
 
 function renderImage(image) {
-  pokemon.setAttribute('src', image)
+  pokemon.setAttribute("src", image);
 }
 
-before.addEventListener('click', () => { 
+before.addEventListener("click", () => { 
   start--;
   promesa(start);
 })
-next.addEventListener('click', () => {
+next.addEventListener("click", () => {
   start++;
   promesa(start);
 })
