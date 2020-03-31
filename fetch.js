@@ -3,11 +3,12 @@ let imagen = document.querySelectorAll('.modal__image');
 let pokename = document.querySelectorAll('.modal__name');
 let before = document.getElementById('before');
 let next = document.getElementById('next');
+let openmodal = document.getElementById('openModal');
 let close = document.querySelectorAll('.modal');
 
 
 function showModal() {
-  document.getElementById('openModal').style.display = 'flex';
+  openmodal.style.display = 'flex';
 }
 
 
