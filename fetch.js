@@ -5,7 +5,7 @@ let before = document.getElementById('before');
 let next = document.getElementById('next');
 let openmodal = document.getElementById('openModal');
 let close = document.querySelectorAll('.modal');
-
+const mensaje = 'mesagge of other machine'
 
 function showModal() {
   openmodal.style.display = 'flex';
